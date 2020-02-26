@@ -1,0 +1,219 @@
+#searchForm {
+	.container {
+		input[type="text"] {
+			float: left;
+			height: 36px;
+			margin: 0 5px 0 0;
+			padding: 7px;
+			width: 270px;
+		}
+
+		.button {
+			float: left;
+			height: 36px;
+			padding: 7px 15px;
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.container {
+		#searchForm {
+			input[type="text"] {
+				margin: 0 1% 0 0;
+				padding-left: 2%;
+				padding-right: 2%;
+				width: 77%;
+			}
+
+			.button {
+				font-size: 13px;
+				padding-left: 2%;
+				padding-right: 2%;
+				width: 22%;
+			}
+		}
+	}
+}
+
+.search-results {
+	margin: 0 !important;
+	padding: 0 !important;
+
+	.result-title {
+		margin: 0 0 10px 0;
+	}
+
+	.result-created {
+		color: $text-muted;
+		font-size: 12px;
+		margin: 0;
+		text-transform: uppercase;
+	}
+
+	.result-text {
+		margin: 5px 0;
+	}
+
+	hr {
+		margin: 20px 0;
+	}
+
+	.highlight {
+		background: $primary;
+		color: $white;
+	}
+}
+
+.counter {
+	margin: 20px 0 10px 0 !important;
+}
+
+.navigation.pagination {
+	margin: 15px 0 0 0;
+	font-size: $font-size-sm;
+	line-height: 1;
+
+	.nav-links {
+		a.prev,
+		a.next {
+			padding: 5px 8px 6px;
+			color: $pagination-color;
+			background: $pagination-bg;
+		}
+
+		.page-numbers {
+			display: inline-block;
+			padding: 5px 8px;
+			color: $pagination-color;
+			background: $pagination-bg;
+
+			&:hover,
+			&:focus {
+				color: $pagination-hover-color;
+				background: $pagination-hover-bg;
+			}
+
+			.meta-nav {
+				display: none;
+			}
+
+			&.current {
+				background: $secondary;
+			}
+		}
+	}
+}
+
+.article-info {
+	color: $text-muted;
+	font-size: 12px;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+*:focus {
+	outline: 0;
+}
+
+.align-left {
+	float: left;
+	margin: 0 15px 10px 0;
+}
+
+.align-right {
+	float: right;
+	margin: 0 0 10px 15px;
+}
+
+.overthrow {
+	clear: both;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.overthrow-message {
+	background: #999 url(../img/table-scroll.png) no-repeat right center;
+	color: #fff;
+	display: inline-block;
+	float: right;
+	font-size: 12px;
+	padding: 2px 15px 2px 7px;
+	text-align: right;
+}
+
+.modulelink {
+	background: url(../img/blank.png) repeat 0 0;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+// Widgetkit Gallery image area
+figure.uk-overlay {
+	line-height: 0;
+
+	* {
+		line-height: 1.4;
+	}
+}
+
+// Widgetkit Gallery hover overlay
+.uk-overlay-background {
+	background: #222;
+	background: rgba(#222, 0.5);
+}
+
+// Widgetkit readmore button
+.uk-overlay-panel {
+	.uk-button {
+		margin: 15px 0 0 0;
+		color: $white !important;
+		border: solid 1px $white !important;
+
+		&:hover,
+		&:focus {
+			color: $body-color !important;
+			background: $white;
+			border: solid 1px $white !important;
+		}
+	}
+}
+
+// Widgetkit Filter links
+ul.uk-subnav {
+	li {
+		&.uk-active a,
+		a:hover,
+		a:focus {
+			color: $link-color;
+		}
+
+		a {
+			color: $link-hover-color;
+		}
+	}
+}
+
+// Widgetkit Switcher (Tabs) navigation
+.uk-tab > li.uk-active > a {
+	color: $link-color;
+}
+
+.uk-panel-box {
+	border-radius: 0;
+}
+
+.uk-thumbnav {
+	line-height: 0;
+}
+
+.uk-text-center {
+	p,
+	ul li,
+	ol li {
+		text-align: center !important;
+	}
+}

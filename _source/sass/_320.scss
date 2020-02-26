@@ -1,0 +1,424 @@
+.inner {
+	padding: 0 15px;
+	position: relative;
+}
+
+.slider {
+	// delete later if we don't use it
+	display: block;
+	height: 250px;
+	overflow: hidden;
+	position: relative;
+
+	.widget,
+	.widget > div,
+	.uk-position-relative,
+	.uk-slideshow,
+	.uk-slideshow li,
+	.uk-cover-background {
+		height: 100% !important;
+	}
+
+	.uk-slideshow {
+		li {
+			// Image
+			.uk-cover-background {
+			}
+
+			// Caption
+			.uk-overlay-panel {
+				display: none;
+			}
+		}
+	}
+}
+
+.slider.slider-full-height {
+	// delete later if we don't use it
+	display: block;
+	height: 100%;
+	left: 0;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+
+	.widget,
+	.widget > div,
+	.uk-position-relative,
+	.uk-slideshow,
+	.uk-slideshow li,
+	.uk-cover-background {
+		height: 100% !important;
+	}
+
+	.uk-slideshow {
+		li {
+			// Image
+			.uk-cover-background {
+			}
+
+			// Caption
+			.uk-overlay-panel {
+			}
+		}
+	}
+
+	// Navigation
+	.uk-position-top-right {
+		top: 180px;
+		z-index: 10;
+	}
+}
+
+.slider.slider-centered {
+	// delete later if we don't use it
+	display: block;
+	height: 600px;
+	overflow: hidden;
+	position: relative;
+
+	.uk-slideshow {
+		li {
+			// Caption
+			.uk-overlay-panel {
+				font-size: 18px;
+				height: 200px;
+				left: 0;
+				text-align: center;
+				overflow: hidden;
+				padding: 0 30px;
+				top: 135px;
+
+				h3 {
+					font-size: 24px;
+					margin: 0 0 15px 0;
+					text-transform: uppercase;
+				}
+
+				.uk-button {
+					// delete later if we don't use it
+					border: solid 1px #fff !important;
+					color: #fff !important;
+					margin: 15px 0 0 0;
+
+					&:hover,
+					&:focus {
+						color: $body-color !important;
+						background: $white;
+						border: solid 1px $white !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+.sub .slider {
+	height: 350px;
+}
+
+.home-container {
+}
+
+.container {
+	.main-content {
+		padding: 0 0 20px 0;
+
+		.breadcrumbs {
+			color: $text-muted;
+			display: block;
+			font-size: 12px;
+			margin-bottom: 15px;
+			text-transform: uppercase;
+
+			a,
+			.active {
+				padding: 0 5px;
+
+				&:first-child {
+					padding-left: 0;
+				}
+			}
+
+			a {
+				color: $text-muted;
+
+				&:hover,
+				&:focus {
+					color: $body-color;
+				}
+			}
+
+			.active {
+				color: $body-color;
+			}
+
+			.separator {
+				display: inline-block;
+				margin: 0 3px;
+			}
+		}
+
+		.blog {
+			.items-row {
+				&:first-child .item:first-child {
+					padding-top: 0;
+				}
+
+				&:last-child .item:last-child {
+					border: none;
+				}
+
+				p:last-child {
+					margin-bottom: 0;
+				}
+
+				.item {
+					border-bottom: solid 1px $border-color;
+					padding: 20px 0;
+
+					h2.title {
+						margin: 0 0 10px;
+					}
+				}
+			}
+		}
+	}
+
+	.left {
+		.moduletable {
+			margin: 0 0 20px 0;
+		}
+
+		.side-nav {
+			h3 {
+				padding: 0 0 5px 0;
+			}
+			ul {
+				li {
+					> a {
+						display: none;
+					}
+					ul {
+						li {
+							border-bottom: solid 1px #fff;
+
+							> a:hover,
+							&.cmw-current-item > a {
+								background: $sm_bg_hover;
+								color: $sm_text_hover;
+							}
+
+							a {
+								background: $sm_bg;
+								color: $sm_text;
+								display: block;
+								font-size: 15px;
+								line-height: 1.2;
+								padding: 10px 20px;
+								text-transform: uppercase;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.before-content {
+	// delete later if we don't use it
+	padding: 0 0 40px 0;
+
+	.image {
+		line-height: 0;
+	}
+
+	.uk-panel-title {
+		font-size: 19px;
+	}
+
+	.uk-panel-box {
+		background: #f8f8f8;
+		border: solid 1px #ebebeb;
+		padding: 30px 40px;
+
+		> .uk-panel-teaser {
+			margin: -30px -40px 20px -40px;
+		}
+	}
+
+	.open-text-2 {
+		.uk-panel-box {
+			color: $white;
+			background: $primary;
+		}
+
+		.uk-panel-title {
+			color: #fff;
+		}
+	}
+
+	.hidden-text {
+		.uk-panel:hover {
+			.content {
+				opacity: 1;
+				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+				filter: alpha(opacity=100);
+			}
+		}
+
+		.uk-panel-title {
+			color: #fff;
+			font-size: 27px;
+			left: 20px;
+			line-height: 1;
+			position: absolute;
+			text-transform: uppercase;
+			top: 20px;
+			width: 200px;
+			z-index: 10;
+		}
+
+		.content {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 15;
+			width: 100%;
+			height: 100%;
+			padding: 20px;
+			overflow: hidden;
+			color: $white;
+			background: $primary;
+			opacity: 0;
+			transition: 0.5s;
+		}
+
+		.uk-margin {
+			margin: 0;
+		}
+
+		.uk-position-z-index {
+			z-index: 20;
+		}
+	}
+
+	// Projects - short info
+	.projects-short {
+		> div {
+			padding-bottom: 35px !important;
+
+			.uk-panel-teaser {
+				margin: 0 0 10px 0;
+			}
+		}
+	}
+
+	// Projects - detailed info
+	.projects-detailed-info {
+		> div {
+			background: #fff;
+			padding-bottom: 30px !important;
+		}
+
+		.uk-panel {
+			border-bottom: solid 1px $border-color;
+			padding-bottom: 30px;
+		}
+	}
+
+	// Projects - slideshow
+	.projects-slider {
+		h3 {
+			font-size: 22px;
+		}
+
+		.nav {
+			display: none;
+		}
+	}
+}
+
+.after-content {
+	// delete later if we don't use it
+	padding: 40px 0 0 0;
+}
+
+.gform_wrapper {
+	h3 {
+		font-size: 28px;
+		margin: 0 0 15px 0;
+	}
+	img.gform_ajax_spinner {
+		display: none !important;
+	}
+	form {
+		li.gfield {
+			margin: 0 !important;
+			padding: 0 0 15px 0 !important;
+
+			&.gfield_error {
+				background: none;
+				border: none;
+				margin: 0;
+				padding: 0;
+
+				input[type="text"],
+				input[type="email"],
+				textarea,
+				select {
+					border: 1px solid #cc0000 !important;
+				}
+			}
+		}
+		.gform_footer {
+			margin: 0;
+			padding: 0;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		textarea,
+		select {
+			height: 40px !important;
+			margin: 0 !important;
+			padding: 10px 15px !important;
+			width: 100% !important;
+		}
+
+		textarea {
+			height: 151px !important;
+		}
+
+		input[type="submit"] {
+			float: right;
+			margin: 0 !important;
+		}
+
+		input.button {
+			//fixs  IE issue
+			padding: 10px 20px !important;
+		}
+
+		div.validation_error {
+			padding: 0;
+			margin: 0 0 15px 0;
+			font-weight: 700;
+			color: #cc0000;
+			text-align: left;
+			background: none;
+			border: none;
+		}
+
+		div.validation_message {
+			padding: 0 !important;
+			font-size: 12px;
+			font-weight: 700;
+			color: #cc0000;
+		}
+	}
+}

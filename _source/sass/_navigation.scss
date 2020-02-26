@@ -1,0 +1,113 @@
+.main-nav {
+	position: relative;
+	z-index: $zindex-fixed;
+	background-color: $menu_background-color;
+
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	.nav {
+		display: flex;
+	}
+
+	.menu-item {
+		a {
+			display: block;
+			text-transform: $menu_text_transform;
+		}
+
+		.sub-menu {
+			display: none;
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.header .main-nav {
+		flex-basis: 100%;
+		flex-grow: 1;
+	}
+
+	.main-nav {
+		display: none;
+
+		.nav {
+			flex-direction: column;
+			flex-grow: 1;
+		}
+
+		.menu-item {
+			a {
+				padding: $mobile_menu_padding;
+				font-size: $mobile_menu_font_size;
+				color: $mobile_menu_text;
+				background-color: $mobile_menu_bg;
+				border-bottom: 1px solid $menu_separator_color;
+			}
+
+			&.current-menu-item a,
+			a:hover,
+			a:focus {
+				color: $mobile_menu_text_hover;
+				background-color: $mobile_menu_bg_hover;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.main-nav {
+		// Competes with JS
+		display: block !important;
+
+		.nav {
+			flex-direction: row;
+		}
+
+		.menu-item {
+			a {
+				padding: $menu_padding;
+				color: $menu1_text;
+				background-color: $menu1_bg;
+			}
+
+			> a {
+				border-right: 1px solid $menu_separator_color;
+			}
+
+			&.current-menu-item a,
+			a:hover,
+			a:focus {
+				color: $menu1_text;
+				background-color: $menu1_bg_hover;
+			}
+
+			@include hover-focus() {
+				.sub-menu {
+					display: block;
+				}
+			}
+
+			.sub-menu {
+				position: absolute;
+
+				.menu-item {
+					a {
+						color: $menu2_text;
+						background-color: $menu2_bg;
+					}
+
+					&.current-menu-item a,
+					a:hover,
+					a:focus {
+						color: $menu1_text;
+						background-color: $menu1_bg_hover;
+					}
+				}
+			}
+		}
+	}
+}

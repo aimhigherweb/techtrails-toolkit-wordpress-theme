@@ -1,0 +1,50 @@
+{
+	"name": "dash-digital-boilerplate",
+	"version": "0.1.2",
+	"private": true,
+	"browserslist": [
+		"IE 11",
+		"> 1%",
+		"last 2 versions"
+	],
+	"lint-staged": {
+		"gitDir": "../../../",
+		"linters": {
+			"./**/*.{js,json,scss,css}": [
+				"prettier --write",
+				"git add"
+			]
+		}
+	},
+	"scripts": {
+		"start": "gulp",
+		"build": "gulp build",
+		"precommit": "lint-staged"
+	},
+	"devDependencies": {
+		"autoprefixer": "7.1.6",
+		"babel-plugin-transform-object-rest-spread": "^6.26.0",
+		"babel-preset-env": "^1.6.1",
+		"babel-register": "^6.26.0",
+		"babelify": "^8.0.0",
+		"browserify": "^14.5.0",
+		"gulp": "github:gulpjs/gulp#4.0",
+		"gulp-cssnano": "^2.1.2",
+		"gulp-postcss": "^7.0.0",
+		"gulp-sass": "^3.1.0",
+		"gulp-sourcemaps": "^2.6.1",
+		"gulp-uglify": "^3.0.0",
+		"gulp-util": "^3.0.8",
+		"husky": "^0.14.3",
+		"lint-staged": "^4.3.0",
+		"prettier": "^1.8.2",
+		"stylelint": "^8.3.1",
+		"stylelint-config-standard": "^18.0.0",
+		"stylelint-order": "^0.8.0",
+		"vinyl-buffer": "^1.0.1",
+		"vinyl-source-stream": "^2.0.0"
+	},
+	"dependencies": {
+		"bootstrap": "^4.0.0-beta.2"
+	}
+}

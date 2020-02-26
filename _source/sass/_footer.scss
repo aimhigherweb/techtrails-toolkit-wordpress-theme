@@ -1,0 +1,114 @@
+.footer {
+	position: relative;
+	z-index: $zindex-fixed;
+	padding: 40px 0 20px;
+	background: $white;
+
+	.footer-nav,
+	.social {
+		ul {
+			display: flex;
+			padding: 0;
+			margin: 0;
+			list-style: none;
+
+			.menu-item a {
+				display: block;
+			}
+		}
+	}
+
+	.footer-nav {
+		.menu-item {
+			a {
+				color: $fm_text;
+
+				@include hover-focus() {
+					color: $fm_text_hover;
+				}
+			}
+		}
+
+		ul {
+			li {
+				font-size: $font-size-sm;
+				line-height: 1;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.social {
+		.menu-item {
+			a {
+				@include hover-focus() {
+					opacity: 0.7;
+				}
+			}
+
+			i {
+				display: inline-block;
+				width: 25px;
+				height: 25px;
+				padding: 5px;
+				font-family: $font-family-icons;
+				color: $primary;
+				text-align: center;
+			}
+		}
+	}
+
+	.dash {
+		display: inline-block;
+		width: 190px;
+		height: 28px;
+		background-image: url("img/dash-2x.png");
+		background-repeat: no-repeat;
+		background-size: 190px auto;
+
+		@include hover-focus() {
+			background-position: 0 100%;
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.footer {
+		.footer-nav {
+			ul {
+				flex-direction: column;
+
+				li {
+					padding: 9px 0;
+				}
+
+				li:not(:last-child) {
+					border-bottom: solid 1px $fm_text;
+				}
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.footer {
+		// Sticky footer code - to be replaced
+		height: 110px !important;
+		padding: 40px 0 20px !important;
+		margin-top: -110px !important;
+
+		.footer-nav {
+			ul {
+				flex-direction: row;
+
+				li {
+					padding: 0 9px;
+				}
+
+				li:not(:last-child) {
+					border-right: solid 1px $fm_text;
+				}
+			}
+		}
+	}
+}
