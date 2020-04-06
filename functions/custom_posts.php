@@ -10,10 +10,13 @@
                 ),
                 'public' => true,
                 'show_in_rest' => true,
+                'show_in_graphql' => true,
                 'has_archive' => true,
                 'menu_icon' => 'dashicons-welcome-learn-more',
                 'publicly_queryable' => true,
                 'public' => true,
+                'graphql_single_name' => 'Career',
+                'graphql_plural_name' => 'Careers'
             )
 		);
 		register_post_type('subject',
@@ -24,10 +27,13 @@
                 ),
                 'public' => true,
                 'show_in_rest' => true,
+                'show_in_graphql' => true,
                 'has_archive' => true,
                 'menu_icon' => 'dashicons-book',
                 'publicly_queryable' => true,
                 'public' => true,
+                'graphql_single_name' => 'Subject',
+                'graphql_plural_name' => 'Subjects'
             )
 		);
 		register_post_type('alignment',
@@ -38,10 +44,13 @@
                 ),
                 'public' => true,
                 'show_in_rest' => true,
+                'show_in_graphql' => true,
                 'has_archive' => true,
                 'menu_icon' => 'dashicons-forms',
                 'publicly_queryable' => true,
                 'public' => true,
+                'graphql_single_name' => 'Alignment',
+                'graphql_plural_name' => 'Alignments'
             )
 		);
 		register_post_type('sentence',
@@ -52,10 +61,13 @@
                 ),
                 'public' => true,
                 'show_in_rest' => true,
+                'show_in_graphql' => true,
                 'has_archive' => true,
                 'menu_icon' => 'dashicons-slides',
                 'publicly_queryable' => true,
                 'public' => true,
+                'graphql_single_name' => 'Sentence',
+                'graphql_plural_name' => 'Sentences'
             )
         );
     }

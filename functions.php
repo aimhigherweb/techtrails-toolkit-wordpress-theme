@@ -1,7 +1,7 @@
 <?php
 
     require_once(__DIR__ . '/functions/acf.php');
-    // require_once(__DIR__ . '/functions/wordpress.php');
+    require_once(__DIR__ . '/functions/wordpress.php');
     require_once(__DIR__ . '/functions/custom_posts.php');
 
     //Trigger Gatsby build when saving post
@@ -84,5 +84,14 @@
     //         delete_option('my_notice_text');
     //     }
     // }
+
+
+    if ( function_exists('register_sidebar') )
+        register_sidebar(array(
+            'name' => 'Footer Text',
+            'before_widget' => '',
+            'after_widget' => '',
+        )
+    );
     
 ?>

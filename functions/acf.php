@@ -9,6 +9,7 @@
 
     if( function_exists('acf_add_local_field_group') ):
 
+		// Career Fields
 		acf_add_local_field_group(array(
 			'key' => 'group_5a6fde576421f',
 			'title' => 'Career Fields',
@@ -172,6 +173,7 @@
 			'description' => '',
 		));
 		
+		// Common Wheel Properties
 		acf_add_local_field_group(array(
 			'key' => 'group_5a6fc51e8deb7',
 			'title' => 'Common Wheel Properties',
@@ -227,7 +229,7 @@
 				),
 			),
 			'menu_order' => 0,
-			'position' => 'acf_after_title',
+			'position' => 'side',
 			'style' => 'default',
 			'label_placement' => 'top',
 			'instruction_placement' => 'label',
@@ -236,6 +238,7 @@
 			'description' => '',
 		));
 		
+		// Helpful Links Resources
 		acf_add_local_field_group(array(
 			'key' => 'group_5a726dea4c0f3',
 			'title' => 'Helpful Links Resources',
@@ -386,6 +389,7 @@
 			'description' => '',
 		));
 		
+		// Subjects
 		acf_add_local_field_group(array(
 			'key' => 'group_5a6fc5d418dea',
 			'title' => 'Subjects',
@@ -398,6 +402,7 @@
 					'instructions' => 'Select the sentences that this object relates to',
 					'required' => 1,
 					'conditional_logic' => 0,
+					'show_in_graphql' => 1,
 					'wrapper' => array(
 						'width' => '',
 						'class' => '',
@@ -413,6 +418,37 @@
 					'return_format' => 'object',
 					'ui' => 1,
 				),
+				array(
+					'key' => 'field_5e8a953b9411c',
+					'label' => 'Area Colours',
+					'name' => 'colour',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 1,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'show_in_graphql' => 1,
+					'choices' => array(
+						'#F9ED31' => 'Yellow',
+						'#00A9A3' => 'Aqua',
+						'#F15A29' => 'Orange',
+						'#BED73B' => 'Green',
+						'#BE1E2D' => 'Maroon',
+						'#6F2B8D' => 'Purple',
+					),
+					'default_value' => array(
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 0,
+					'return_format' => 'value',
+					'ajax' => 0,
+					'placeholder' => '',
+				),
 			),
 			'location' => array(
 				array(
@@ -424,15 +460,17 @@
 				),
 			),
 			'menu_order' => 0,
-			'position' => 'normal',
+			'position' => 'side',
 			'style' => 'default',
 			'label_placement' => 'top',
 			'instruction_placement' => 'label',
 			'hide_on_screen' => '',
 			'active' => true,
 			'description' => '',
+			'graphql_field_name' => 'subject',
 		));
 		
+		// Alignments
 		acf_add_local_field_group(array(
 			'key' => 'group_5a6fc57e52fed',
 			'title' => 'Those With Alignments',
@@ -478,13 +516,62 @@
 				),
 			),
 			'menu_order' => 0,
-			'position' => 'acf_after_title',
+			'position' => 'side',
 			'style' => 'default',
 			'label_placement' => 'top',
 			'instruction_placement' => 'label',
 			'hide_on_screen' => '',
 			'active' => true,
 			'description' => '',
+		));
+
+		//Add social icons to social menu
+        acf_add_local_field_group(array(
+            'key' => 'group_5c9ad2a1d1415',
+            'title' => 'Menu Icons',
+            'fields' => array(
+                array(
+                    'key' => 'field_5c9ad2cb3f1f4',
+                    'label' => 'Social Icon',
+                    'name' => 'icon',
+                    'type' => 'image',
+                    'instructions' => '',
+                    'required' => 1,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'return_format' => 'url',
+                    'preview_size' => 'thumbnail',
+                    'library' => 'all',
+                    'min_width' => '',
+                    'min_height' => '',
+                    'min_size' => '',
+                    'max_width' => '',
+                    'max_height' => '',
+                    'max_size' => '',
+                    'mime_types' => '',
+                ),
+            ),
+            'location' => array(
+				array(
+					array(
+						'param' => 'nav_menu_item',
+						'operator' => '==',
+						'value' => 'location/social',
+					),
+				),
+			),
+            'menu_order' => 0,
+            'position' => 'acf_after_title',
+            'style' => 'seamless',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => '',
+            'active' => true,
+            'description' => '',
 		));
 		
 		endif;
