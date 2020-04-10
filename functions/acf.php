@@ -398,7 +398,7 @@
 					'key' => 'field_5a6fc5de5d838',
 					'label' => 'sentences',
 					'name' => 'sentences',
-					'type' => 'post_object',
+					'type' => 'relationship',
 					'instructions' => 'Select the sentences that this object relates to',
 					'required' => 1,
 					'conditional_logic' => 0,
@@ -449,6 +449,30 @@
 					'ajax' => 0,
 					'placeholder' => '',
 				),
+				array(
+					'key' => 'field_5a6fde7f322ds',
+					'label' => 'Featured Image',
+					'name' => 'featured_image',
+					'type' => 'image',
+					'instructions' => '',
+					'required' => 1,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'return_format' => 'array',
+					'preview_size' => 'thumbnail',
+					'library' => 'all',
+					'min_width' => '',
+					'min_height' => '',
+					'min_size' => '',
+					'max_width' => '',
+					'max_height' => '',
+					'max_size' => '',
+					'mime_types' => '',
+				),
 			),
 			'location' => array(
 				array(
@@ -479,7 +503,7 @@
 					'key' => 'field_5a6fc584f2e5b',
 					'label' => 'alignments',
 					'name' => 'alignments',
-					'type' => 'post_object',
+					'type' => 'relationship',
 					'instructions' => 'Select all the alignments that this object relates to',
 					'required' => 1,
 					'conditional_logic' => 0,
@@ -488,6 +512,7 @@
 						'class' => '',
 						'id' => '',
 					),
+					'show_in_graphql' => 1,
 					'post_type' => array(
 						0 => 'alignment',
 					),
@@ -523,6 +548,8 @@
 			'hide_on_screen' => '',
 			'active' => true,
 			'description' => '',
+			'show_in_graphql' => 1,
+			'graphql_field_name' => 'relatedAlignments',
 		));
 
 		//Add social icons to social menu
@@ -574,5 +601,5 @@
             'description' => '',
 		));
 		
-		endif;
+	endif;
 ?>

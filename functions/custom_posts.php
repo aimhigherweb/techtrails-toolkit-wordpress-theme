@@ -70,19 +70,13 @@
                 'graphql_plural_name' => 'Sentences'
             )
         );
+
     }
     add_action('init', 'create_post_type');
 
-    /*
-    * Disable Gutenberg for Custom Conference Post Type
-    */
-
-    add_filter('use_block_editor_for_post_type', 'prefix_disable_gutenberg', 10, 2);
-    function prefix_disable_gutenberg($current_status, $post_type)
-    {
-        // Use your post type key instead of 'product'
-        if ($post_type === 'wpconf') return false;
-        return $current_status;
+    // Add featured image for subjects
+    function techtrails_add_featured_image() {
+        add_post_type_support( 'subject', 'thumnail' );
     }
-
+    add_action( 'init', 'techtrails_add_featured_image' );
 ?>
